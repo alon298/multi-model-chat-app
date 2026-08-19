@@ -1,0 +1,1 @@
+FROM python:3.12-slim\nWORKDIR /app\nCOPY . .\nRUN pip install -r requirements.txt\nEXPOSE 8300\nCMD ["uvicorn", "chat_server:app", "--host", "0.0.0.0", "--port", "8300"]\n
